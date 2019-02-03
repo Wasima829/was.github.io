@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+ width: 100%;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
+ margin-top: 6px;
+ margin-bottom: 16px;
+ resize: vertical;
+}
+
+input[type=submit] {
+ background-color: #4CAF50;
+ color: white;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+input[type=submit]:hover {
+ background-color: #45a049;
+}
+
+.container {
+ border-radius: 5px;
+ background-color: #f2f2f2;
+ padding: 20px;
+}
+</style>
+
+<script type="text/javascript">
+var digitalData = new Object();
+digitalData.page={
+    pageInfo:{
+        pageName:"gsk:asset:form",
+        pageType:"leads"
+    },
+    category:{
+    subCategory1:"gsk:teamwork:leads",
+    subCategory2:"hello1",
+    subCategory3:"hello2",
+    subCategory4:"hello3"
+    }
+}
+</script>
+
+<script src="//assets.adobedtm.com/e45701b338014866a724f0b6bacc337b99142bcf/satelliteLib-9d5265140c89399d4708ffaeb938a6a52011f60d.js"></script>
+</head>
+<body>
+
+<h3>Contact Form</h3>
+<div>
+<span id="thankyou"> </span>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('firstname');
+if(myParam)
+{
+document.getElementById('thankyou').innerHTML = 'Thanks for contacting us '+myParam+'!!';
+digitalData.page.pageInfo.pageName = "gsk:asset:form:complete";
+}
+const myHashed = urlParams.get('email');
+{
+    if(myHashed == 'subhbhat@adobe.com')
+    {
+        digitalData.page.pageInfo.hashedID = "3381b59e6a96abd0982f5868530dcac5"
+    }
+    else if(myHashed == 'ans@adobe.com')
+    {
+        digitalData.page.pageInfo.hashedID = "3d18b59facdb9ae2b5edc95b9ff68256"
+    }
+    else if(myHashed == 'grajan@adobe.com')
+    {
+        digitalData.page.pageInfo.hashedID = "82fbfa9357be926ce6aa079fbeb8f24a"
+    }    
+    else if(myHashed == 'akram@adobe.com')
+    {
+        digitalData.page.pageInfo.hashedID = "8f3a06c2c17315e80fc3446c04474fe2"
+    }    
+    else if(myHashed == 'tamilman@adobe.com')
+    {
+        digitalData.page.pageInfo.hashedID = "e5b39851fce62bc11d3948bb4225e008"
+    }
+	else if(myHashed == 'testusergdc@yahoo.com')
+    {
+        digitalData.page.pageInfo.hashedID = "7b14636ec6c049dee341c1521c6f668f"
+    }
+}
+
+</script>
+</div>
+</br>
+<div class="container">
+ <form action="/gsk/formPage.html">
+   <label for="fname">First Name</label>
+   <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+   <label for="lname">Last Name</label>
+   <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+   <label for="email">Email Id</label>
+    <input type="text" id="email" name="email" placeholder="Your email id..">
+
+   <input id="bSubmit" type="submit" value="Submit">
+ </form>
+</div>
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>
